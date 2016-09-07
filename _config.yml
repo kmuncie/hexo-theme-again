@@ -1,7 +1,7 @@
 # basic
 title: PLACEHOLDER_TITLE
 subtitle: PLACEHOLDER_SUBTITLE
-favicon:
+# favicon:
 
 # Supply your own static images
 # avatar: images/avatar.png
@@ -12,10 +12,10 @@ favicon:
 # disqus_shortname:
 
 # social
-social:
-  github: 
-  twitter: 
-  weibo:
+# social:
+ # github: 
+ # twitter: 
+ # weibo:
 
 # nav #
 nav:
