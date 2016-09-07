@@ -1,10 +1,9 @@
-# hexo-theme-again
-[Check it out](http://drakeleung.github.io/blog/)
+# hexo-theme-muncie
 
 ## Usage
 1. In the `themes/` directory:
     ```git
-    git clone https://github.com/DrakeLeung/hexo-theme-again.git again
+    git clone https://github.com/kmuncie/hexo-theme-muncie.git muncie
     ```
 
 2. In the project root directory:
@@ -15,21 +14,10 @@
 3. Change the `theme` property in the `config.yml` file.
     ```yml
     # theme: landscape
-    theme: again
+    theme: muncie
     ```
 
 4. Run: `hexo server`
-
-5. **If failed, just new an issue :D**
-
-## Screenshot
-*Index*:
-
-![](http://ww1.sinaimg.cn/mw690/7f85b91egw1f0e4azpnx2j21160isadj.jpg)
-
-*Archive*:
-
-![](http://ww1.sinaimg.cn/mw690/7f85b91egw1f0e5azhrruj211k0ip40v.jpg)
 
 ## License
 MIT
