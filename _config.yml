@@ -1,23 +1,21 @@
 # basic
-title: 追客
-subtitle: You are the JavaScript in my HTML
-favicon: favicon.ico
+title: PLACEHOLDER_TITLE
+subtitle: PLACEHOLDER_SUBTITLE
+favicon:
 
+# Supply your own static images
 # avatar: images/avatar.png
 # banner_small: images/banner-small.png
 # banner_large: images/banner-large.png
-avatar: http://7xrcp8.com1.z0.glb.clouddn.com/avatar.png
-banner_small: http://7xrcp8.com1.z0.glb.clouddn.com/banner-small.png
-banner_large: http://7xrcp8.com1.z0.glb.clouddn.com/banner-large.png
 
 # disqus
-disqus_shortname: drakeleung
+# disqus_shortname:
 
 # social
 social:
-  github: https://github.com/DrakeLeung
-  twitter: https://twitter.com/DrakeLeung
-  weibo: http://weibo.com/cha12chalyc
+  github: 
+  twitter: 
+  weibo:
 
 # nav #
 nav:
