@@ -1,21 +1,20 @@
 # basic
 title: PLACEHOLDER_TITLE
 subtitle: PLACEHOLDER_SUBTITLE
-# favicon:
+favicon: favicon.ico
 
 # Supply your own static images
-# avatar: images/avatar.png
-# banner_small: images/banner-small.png
-# banner_large: images/banner-large.png
+avatar: images/avatar.png
+banner_small: images/banner-small.png
+banner_large: images/banner-large.png
 
 # disqus
 # disqus_shortname:
 
 # social
-# social:
- # github: 
- # twitter: 
- # weibo:
+social:
+ github: https://github.com/
+ twitter: https://twitter.com/
 
 # nav #
 nav:
