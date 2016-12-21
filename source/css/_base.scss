@@ -1,22 +1,112 @@
-* {
-  box-sizing: border-box;
+@mixin medium {
+   @media (min-width: 400px) {
+      @content;
+   }
 }
 
-html, body {
-  height: 100%;
-  width: 100%;
+@mixin large {
+   @media (min-width: 1200px) {
+      @content;
+   }
+}
+
+// Colors
+
+$offWhite: #fdfff2;
+$lightGrey: #6F7D8C;
+$purple: lighten(#441933, 20%);
+$green: #467044;
+$darkGrey: #484349;
+
+$font-mono: 'Inconsolata', monospace;
+$font-par: 'Cormorant Garamond', serif;
+
+
+* {
+   box-sizing: border-box;
 }
 
 html {
-  font-size: $root-font-size;
+   font-size: 18px;
+   @include medium {
+      font-size: 20px;
+   }
+   @include large {
+      font-size: 22px;
+   }
 }
 
 body {
-  margin: 0;
-  font-family: $font-sans;
+   background-color: $offWhite;
+   @include container(1500px);
+   margin: 0 25px;
+   font-family: $font-par;
+   font-size: 1em;
+   @include medium {
+      margin: 0 50px;
+   }
+}
+
+h1, h2, h3, h4, h5 {
+   font-family: $font-mono;
+   font-weight: 400;
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+   text-decoration: none;
+   color: $purple;
+   font-weight: 200;
+   &:visited {
+      color: darken($purple, 20%);
+   }
+}
+
+.app-nav {
+   margin-top: 5px;
+   a {
+      padding: 5px;
+   }
+}
+
+.page-nav {
+   font-family: $font-mono;
+   margin: 30px 0;
+   > * {
+      margin-right: 20px;
+      color: $purple !important;
+   }
+}
+
+.description {
+   text-align: center;
+   border-bottom: 5px solid $green;
+   padding: 10px 0;
+   .title {
+      margin: 0;
+      font-size: 25px;
+   }
+   .subtitle {
+      margin: 0;
+      font-size: 15px;
+      font-family: $font-par;
+   }
+}
+
+.index {
+   article {
+      padding: 10px 0;
+      margin: 10px 0;
+      border-bottom: 1px dotted $offWhite;
+      &:hover, &:focus {
+         border-bottom: 1px dotted $green;
+      }
+      .article-date {
+         font-size: 16px;
+         font-family: $font-par;
+         color: $lightGrey;
+      }
+      .article-title {
+         margin: 0;
+      }
+   }
 }
