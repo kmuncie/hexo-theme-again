@@ -1,11 +1,11 @@
 @mixin medium {
-   @media (min-width: 400px) {
+   @media (min-width: 500px) and (max-width: 800px) {
       @content;
    }
 }
 
 @mixin large {
-   @media (min-width: 1200px) {
+   @media (min-width: 800px) {
       @content;
    }
 }
@@ -20,7 +20,6 @@ $darkGrey: #484349;
 
 $font-mono: 'Inconsolata', monospace;
 $font-par: 'Cormorant Garamond', serif;
-
 
 * {
    box-sizing: border-box;
@@ -38,24 +37,52 @@ html {
 
 body {
    background-color: $offWhite;
-   @include container(1500px);
-   margin: 0 25px;
+   max-width: 1500px;
+   margin: 0 auto;
+   margin: 0 10px;
    font-family: $font-par;
-   font-size: 1em;
+   font-size: 1.2em;
    @include medium {
-      margin: 0 50px;
+      margin: 0 20px;
+   }
+   @include large {
+      margin: 0 30px;
    }
 }
 
 h1, h2, h3, h4, h5 {
-   font-family: $font-mono;
+   font-family: $font-par;
    font-weight: 400;
+}
+
+h1 {
+   font-size: 2em;
+   @include medium {
+      font-size: 2.2em;
+   }
+   @include large {
+      font-size: 2.4em;
+   }
+}
+
+h2 {
+   font-size: 1.6em;
+   @include medium {
+      font-size: 1.8em;
+   }
+   @include large {
+      font-size: 2em;
+   }
 }
 
 a {
    text-decoration: none;
-   color: $purple;
+   color: $green;
    font-weight: 200;
+   &:hover,
+   &:focus {
+      background-color: lighten($green, 30%);
+   }
    &:visited {
       color: darken($purple, 20%);
    }
@@ -63,6 +90,8 @@ a {
 
 .app-nav {
    margin-top: 5px;
+   font-size: 18px;
+   font-family: $font-mono;
    a {
       padding: 5px;
    }
@@ -79,15 +108,18 @@ a {
 
 .description {
    text-align: center;
-   border-bottom: 5px solid $green;
+   border-bottom: 1px solid $green;
    padding: 10px 0;
+   @include medium {
+      border-bottom: 5px;
+   }
    .title {
       margin: 0;
-      font-size: 25px;
+      font-size: 35px;
    }
    .subtitle {
       margin: 0;
-      font-size: 15px;
+      font-size: 20px;
       font-family: $font-par;
    }
 }
@@ -102,11 +134,80 @@ a {
       }
       .article-date {
          font-size: 16px;
-         font-family: $font-par;
+         font-family: $font-mono;
          color: $lightGrey;
       }
       .article-title {
          margin: 0;
+         font-family: $font-mono;
       }
+   }
+}
+
+.post {
+   .article-title {
+      margin-bottom: 10px;
+   }
+   .article-date {
+      margin: 0 0 2em 0;
+      color: $lightGrey;
+      font-size: 18px;
+      font-family: $font-mono;
+   }
+}
+
+.article-entry {
+   max-width: 800px;
+   a {
+      background-color: #dfead9;
+      &:hover, &:focus {
+         color: $purple;
+         background-color: lighten($green, 30%);
+      }
+   }
+   p {
+      font-size: 1.3em;
+      line-height: 1.5;
+      img {
+         width: 100%;
+         height: auto;
+      }
+   }
+   img {
+      width: 100%;
+      height: auto;
+   }
+   @include medium {
+      margin-left: 15px;
+      font-size: 24px;
+   }
+   @include large {
+      margin-left: 50px;
+      font-size: 26px;
+   }
+}
+
+.placeData {
+   h3 {
+      padding: 5px 10px;
+      margin-bottom: 0;
+      border-radius: 3px 3px 0 0;
+      background-color: #e3deff;
+      border-left: 5px solid #3a5679;
+      + p, + p + p{
+         margin: 0;
+         padding: 20px;
+         font-size: 90%;
+         border-left: 5px solid #3a5679;
+      }
+      + p + p {
+         padding-top: 0;
+      }
+   }
+   iframe {
+      max-height: 200px;
+      border-left: 5px solid #3a5679;
+      padding: 10px 0;
+      border-radius: 0 0 0 3px;
    }
 }

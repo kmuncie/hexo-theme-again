@@ -1,22 +1,24 @@
 # basic
 title: Static Map
 subtitle: Writing and Ranting
-favicon: favicon.ico
-
-# social
-social:
- github: https://github.com/kmuncie
- twitter: https://twitter.com/kmuncie
+favicon: /images/favicon.ico
 
 # nav #
 nav:
   home: .
   archive: archives
-  about: about
-  rss: atom.xml
+  about: /about.html
+  rss: /atom.xml
 
-# heox-renderre-sass
+# hexo-renderer-sass
 node_sass:
   outputStyle: nested
   precision: 5
   sourceComments: false
+
+feed:
+  type: atom
+  path: /atom.xml
+  limit: 
+  hub:
+  content:
