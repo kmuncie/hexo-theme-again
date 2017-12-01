@@ -30,9 +30,6 @@ html {
    @include medium {
       font-size: 20px;
    }
-   @include large {
-      font-size: 22px;
-   }
 }
 
 body {
@@ -166,11 +163,22 @@ a {
       }
    }
    p {
-      font-size: 1.3em;
+      font-size: 1.15em;
       line-height: 1.5;
       img {
          width: 100%;
          height: auto;
+      }
+   }
+   code {
+      font-size: 0.8em;
+      background-color: #f1f1f1;
+      padding: 0 5px;
+      &:before {
+         content: "« ";
+      }
+      &:after {
+         content: " »";
       }
    }
    img {
@@ -178,12 +186,11 @@ a {
       height: auto;
    }
    @include medium {
-      margin-left: 15px;
-      font-size: 24px;
+      margin-left: 25px;
    }
    @include large {
-      margin-left: 50px;
-      font-size: 26px;
+      margin-left: 45px;
+      font-size: 22px;
    }
 }
 
